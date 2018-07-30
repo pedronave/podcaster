@@ -11,6 +11,6 @@
 </div>
 <div *ngIf="results?.resultCount > 0">
   <div *ngFor="let res of results.results">
-    <p>{{ res.trackName }} - {{ res.artistName }}</p>
+    <a [routerLink]="['/podcast']" [queryParams]="{ url: res.feedUrl}">{{ res.trackName }} - {{ res.artistName }}</a>
   </div>
 </div>

@@ -1,0 +1,18 @@
+<h1>
+  {{this.feed?.feed.title}}
+</h1>
+<p>
+  {{this.feed?.feed.description}}
+</p>
+
+<audio id="player" controls>
+  <source id="player-source" src="" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+<h2>Episodes:</h2>
+<ul>
+  <li *ngFor="let item of this.feed?.items" >
+    <p (click)="playEpisode(item)">{{item.title}}</p>
+  </li>
+</ul>
